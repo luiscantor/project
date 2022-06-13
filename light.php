@@ -28,12 +28,12 @@
          <?php
           if(isset($_GET['on'])){
                  //exec('sudo python /var/www/html/home/relay_on.py');
-                 system("gpio mode 0 out");
-                 system("gpio write 1 1");
+                 system("gpio -g mode 18 out");
+                 system("gpio -g write 18 1");
          }
          else if(isset($_GET['off'])){
                 // exec('sudo /usr/bin/python /var/www/html/home/relay_off.py');
-                 system("gpio write 1 0");
+                 system("gpio -g write 18 0");
          }
          ?>
 
